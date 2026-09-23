@@ -1,5 +1,8 @@
 ---
 name: claim-to-source-auditor
+slug: claim-to-source-auditor-skill
+displayName: Claim-to-Source Auditor
+version: "1.0.6"
 description: When the user asks to audit, fact-check, verify, or cross-check an
   article, report, draft, or series. Triggered by
   审稿/审计/核验/事实检查/来源追溯/查一下这个数据/核对/审查/跨平台一致性/三平台统一/回归检查/有没有事实错误/这个引用对不对/跟上次比有没有退化.
@@ -15,7 +18,6 @@ not_for:
   - Legal, regulatory, or localization compliance review (use a localization or compliance skill)
   - Rewriting style, tone, or argument structure
   - Formatting citations or bibliographies
-version: "1.0.4"
 agent_created: true
 ---
 
