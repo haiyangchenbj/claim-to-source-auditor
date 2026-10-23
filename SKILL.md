@@ -2,7 +2,7 @@
 name: claim-to-source-auditor
 slug: claim-to-source-auditor-skill
 displayName: Claim-to-Source Auditor
-version: "1.0.6"
+version: "1.0.7""
 description: When the user asks to audit, fact-check, verify, or cross-check an
   article, report, draft, or series. Triggered by
   审稿/审计/核验/事实检查/来源追溯/查一下这个数据/核对/审查/跨平台一致性/三平台统一/回归检查/有没有事实错误/这个引用对不对/跟上次比有没有退化.
@@ -142,6 +142,7 @@ Output a structured report containing:
 2. Papers, court judgments, and regulatory texts must never be silently altered. Mark any paraphrase, translation, or correction explicitly. Never present a paraphrase as a direct quotation.
 3. Published articles may be revised directly when the user accepts a change. Every change to a paper citation, judgment, or regulatory reference must carry an annotation.
 4. Separate event facts, platform/party attributions, and author interpretation — do not compress them into a single sentence.
+5. Synthesized numbers (totals, percentages, ratios computed from sources) must show their arithmetic; a computed claim presented without its inputs is treated as unsourced and fails.
 5. Regulatory materials define jurisdiction-specific requirements. Do not compress them into universal prohibitions.
 6. A prior fact-check report is a regression oracle, not proof that the current version is clean. Compare every historical P0/P1 item against the current text.
 7. The default for any claim without a verifiable source is 缺证, not 通过.
