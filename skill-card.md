@@ -1,6 +1,6 @@
 ## Description:
 
-Audits articles, reports, drafts, or series by extracting verifiable claims, tracing them to primary or reliable secondary sources, classifying source support, and producing structured audit outputs.
+Audits claims in articles, reports, drafts, and related versions by tracing them to reliable sources and producing structured reports.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Editors, analysts, researchers, and publication teams use this skill to audit high-risk factual claims, verify source support, compare versions across platforms, and produce audit reports with optional regression gold-set CSVs.
+Writers, editors, and analysts use this skill to verify claims against primary and reliable secondary sources, compare related versions, and record unresolved evidence gaps in audit reports.
 
 ### Deployment Geography for Use:
 
@@ -22,31 +22,30 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: The skill may inspect local files, research databases, internal logs, or other source material while auditing claims.
+Risk: Confidential or unauthorized material could be exposed in external searches or saved audit records.
 
-Mitigation: Confirm which local files, databases, and logs the agent may access before running an audit.
+Mitigation: Use only authorized local evidence, omit confidential details from external search queries, and save claim records in an appropriate approved location.
 
-Risk: Generated audit CSVs may contain article claims, source URLs, or internal evidence summaries.
+Risk: The extra quote in the artifact's version field may interfere with installation.
 
-Mitigation: Review generated CSV gold sets and audit artifacts before sharing or storing them outside the intended workspace.
+Mitigation: Correct the version field's quoting before installation.
 
 ## Reference(s):
 
-- [ClawHub skill page](https://clawhub.ai/haiyangchenbj/skills/claim-to-source-auditor-skill)
 
 ## Skill Output:
 
-**Output Type(s):** [Text, Markdown, CSV, Guidance]
+**Output Type(s):** [CSV, Markdown]
 
-**Output Format:** [Structured Markdown audit report with CSV claim tables and optional regression gold-set CSV.]
+**Output Format:** [Structured Markdown audit report and CSV claim log; optional CSV regression gold set]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Includes claim verdicts, severity levels, source register entries, cross-platform comparison notes, and regression check results.]
+**Other Properties Related to Output:** [The gold-set CSV is optional.]
 
 ## Skill Version(s):
 
-1.0.6 (source: frontmatter and server release evidence)
+1.0.7 (source: server-resolved release metadata)
 
 ## Ethical Considerations:
 
