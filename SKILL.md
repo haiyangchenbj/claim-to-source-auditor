@@ -2,7 +2,7 @@
 name: claim-to-source-auditor
 slug: claim-to-source-auditor-skill
 displayName: Claim-to-Source Auditor
-version: "1.0.8"
+version: "1.0.9"
 description: When the user asks to audit, fact-check, verify, or cross-check an
   article, report, draft, or series. Triggered by
   审稿/审计/核验/事实检查/来源追溯/查一下这个数据/核对/审查/跨平台一致性/三平台统一/回归检查/有没有事实错误/这个引用对不对/跟上次比有没有退化.
@@ -163,6 +163,7 @@ Output a structured report containing:
 | Scenario | Action |
 |---|---|
 | Source is behind a paywall or blocked | Mark the claim as 缺证; note the source is unavailable |
+| Source URL is dead (404) or only an archived snapshot exists | Mark as 缺证 unless a retrievable archived snapshot with its own access date can be cited as the source; note link rot and do not treat the live URL as L0/L1 evidence |
 | Primary source and secondary source disagree | Surface both with verbatim quotes; flag the conflict |
 | Claim involves a future prediction | Mark as 判断; do not treat it as a fact |
 | Foreign-language regulatory text | Use an official translation if available; otherwise mark as 部分支持 and flag language limitation |
